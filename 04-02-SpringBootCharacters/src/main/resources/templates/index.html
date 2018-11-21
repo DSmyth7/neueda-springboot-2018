@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.min.css" rel="stylesheet">
+<title>Movie Characters Home</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+				<h1 class="display-4">Movie Characters</h1>
+				<h3>
+					<a href="shrek">Shrek</a> <a>|</a> <a href="toystory">Toy Story</a>
+				</h3>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ import uk.ac.belfastmet.character.service.CharacterService;
 
 
 @Controller
-@RequestMapping("/tolkien")
+@RequestMapping("/toystory")
 public class ToyStoryController {
 	
 	@GetMapping("")

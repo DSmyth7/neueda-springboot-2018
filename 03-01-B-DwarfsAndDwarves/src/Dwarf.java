@@ -1,6 +1,8 @@
 
 public class Dwarf {
 	
+	
+	//This is a change for git
 	private String name, author, image;
 	
 

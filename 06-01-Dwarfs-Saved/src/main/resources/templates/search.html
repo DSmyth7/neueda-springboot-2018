@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.min.css" rel="stylesheet">
+<title>Dwarf Home</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+				<h1 class="display-4">Search</h1>
+				<h3>
+					<a href="disney">Disney</a> <a>|</a> <a href="tolkien">Tolkien</a>
+				</h3>
+
+			</div>
+		</div>
+		<form>
+  Dwarf name:<br/>
+  <input type="text" name="firstname"><br/><br/>
+   <input type="submit" value="Submit">
+
+</form>
+	</div>
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

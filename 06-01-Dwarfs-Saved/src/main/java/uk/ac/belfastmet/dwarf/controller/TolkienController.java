@@ -8,20 +8,34 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import uk.ac.belfastmet.dwarf.domain.Dwarf;
+import uk.ac.belfastmet.dwarf.repository.DwarfRepository;
 import uk.ac.belfastmet.dwarf.service.DwarfService;
 
 @Controller
 @RequestMapping("/tolkien")
 public class TolkienController {
 	
+DwarfRepository dwarfRepository;
+	
+	
+	
+	public TolkienController(DwarfRepository dwarfRepository) {
+		super();
+		this.dwarfRepository = dwarfRepository;
+	}
+
+	
 	@GetMapping("")
 	public String home(Model model) {
 		
-		DwarfService dwarfService = new DwarfService();
-		ArrayList<Dwarf> tolkienDwarfs = dwarfService.getTolkienDwarfs();
+		//DwarfService dwarfService = new DwarfService();
+		//ArrayList<Dwarf> tolkienDwarfs = dwarfService.getTolkienDwarfs();
+		//model.addAttribute("tolkienDwarfs", tolkienDwarfs);
 		model.addAttribute("pageTitle","Tolkien!");
-		model.addAttribute("tolkienDwarfs", tolkienDwarfs);
-		return "tolkien.html";
+		model.addAttribute("headingOne","Tolkien");
+		model.addAttribute("disneyDwarfs", this.dwarfRepository.findByAuthor("Tolkien"));
+		return "dwarf.html";
+		
 		
 	}
 

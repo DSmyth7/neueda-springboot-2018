@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Kalam|Montserrat" rel="stylesheet"> 
+<title th:text="${pageTitle}">Shrek</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+				<h1 class="display-4">Shrek</h1>
+				<h3>
+					<a href="/">Home</a> <a>|</a> <a href="toystory">Toy Story</a>
+				</h3>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+					
+							<div class="card col-lg-4" th:each="shrekChar: ${shrekCharacters}">
+							<h2 class="card-title text-center" th:text="${shrekChar.name}"></h2>
+								<img class="card-img-top" src="../static/images/Shrek.png"
+									th:src="@{/images/}+${shrekChar.image}"></img>
+								<div class="card-body">
+									
+									<h3 class="card-text" th:text="${shrekChar.author}"></h3>
+									<a href="#" class="btn btn-primary">See Profile</a>
+								</div>
+							</div>
+											
+		</div>
+			<footer th:replace="layouts/nav :: footerFragment"></footer>
+</div>
+
+	</div>
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -8,9 +8,10 @@ public class FloorAreaBuilding extends Building{
 		super();
 	}
 
-	public FloorAreaBuilding(String floorArea) {
-		super();
+	public FloorAreaBuilding(String name, String country, String place, String image, String map, String floorArea) {
+		super(name, country, place, image, map);
 		this.floorArea = floorArea;
+
 	}
 
 	public String getFloorArea() {
@@ -22,6 +23,4 @@ public class FloorAreaBuilding extends Building{
 	}
 	
 	
-	
-
 }

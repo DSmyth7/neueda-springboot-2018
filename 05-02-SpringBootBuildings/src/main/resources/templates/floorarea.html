@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Kalam|Montserrat|Nunito" rel="stylesheet"> 
+<title th:text="${pageTitle}">Volume</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+				<h1 class="display-4">Largest Building by Footprint</h1>
+				<h3>
+					<a href="/">Home</a> <a>|</a> <a href="volume">Volume</a> <a>|</a> <a href="floorarea">Floor Area</a>
+				</h3>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+					
+							<div class="card col-lg-4" th:each="floorAreaBuild: ${floorAreaBuildings}">
+							<h2 class="card-title text-center" th:text="${floorAreaBuild.name}"></h2>
+							<hr/>
+								<img class="card-img-top" src="../static/images/BoeingEverett.png"
+									th:src="@{/images/}+${floorAreaBuild.image}"></img>
+									<hr/>
+								<div class="card-body">
+									<h3 class="card-text" th:text="${floorAreaBuild.country}"></h3>
+									<h4 class="card-text" th:text="${floorAreaBuild.place}"></h4><br/>
+									
+								
+									<br/>
+									<center><p class="card-text" th:utext="${floorAreaBuild.map}"></p>
+									<br>
+									
+									<a href="#" class="btn btn-primary">View</a>
+									
+									</center>
+								</div>
+							</div>						
+			</div>
+		</div>
+<footer th:replace="layouts/nav :: footerFragment"></footer>
+	</div>
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>uk.ac.belfastmet</groupId>
-	<artifactId>dwarf</artifactId>
+	<artifactId>springbootbuildings</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>06-01-Dwarfs-Saved</name>
-	<description>Spring Boot Project for Dwarfs</description>
+	<name>05-02-SpringBootBuildings</name>
+	<description>Spring Boot Project for Buildings</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

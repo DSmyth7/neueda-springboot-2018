@@ -8,5 +8,14 @@ public interface DwarfRepository extends CrudRepository<Dwarf, Integer> {
 	
 	
 	Iterable<Dwarf> findByAuthor(String author);
+
+	Dwarf findByDwarfId(Integer dwarfId);
+
+	Dwarf findByName(String dwarfName);
+
+	
+	Object findByNameAndAuthor(String dwarfName, String authorName);
+
+		
 	
 }

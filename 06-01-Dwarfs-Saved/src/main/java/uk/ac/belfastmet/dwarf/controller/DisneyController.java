@@ -35,7 +35,7 @@ public class DisneyController {
 		model.addAttribute("pageTitle","Dwarf!");
 		model.addAttribute("headingOne","Disney");
 		//model.addAttribute("disneyDwarfs", disneyDwarfs);
-		model.addAttribute("disneyDwarfs", this.dwarfRepository.findByAuthor("Disney"));
+		model.addAttribute("dwarfs", this.dwarfRepository.findByAuthor("Disney"));
 		return "dwarf.html";
 	}
 

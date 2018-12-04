@@ -33,7 +33,7 @@ DwarfRepository dwarfRepository;
 		//model.addAttribute("tolkienDwarfs", tolkienDwarfs);
 		model.addAttribute("pageTitle","Tolkien!");
 		model.addAttribute("headingOne","Tolkien");
-		model.addAttribute("disneyDwarfs", this.dwarfRepository.findByAuthor("Tolkien"));
+		model.addAttribute("dwarfs", this.dwarfRepository.findByAuthor("Tolkien"));
 		return "dwarf.html";
 		
 		

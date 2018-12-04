@@ -3,7 +3,7 @@
 <head>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
 <title>Dwarf Home</title>
 </head>
 <body>
@@ -14,11 +14,51 @@
 
 				<h1 class="display-4">Dwarfs</h1>
 				<h3>
-					<a href="disney">Disney</a> <a>|</a> <a href="tolkien">Tolkien</a> <a>|</a> <a href="search">Search</a>
+					<a href="disney">Disney</a> <a>|</a> <a href="tolkien">Tolkien</a>
 				</h3>
 
 			</div>
 		</div>
+<form action="/searchid" method="get">
+<div class="form-group">
+<label>ID: </label>
+<input type="text" name="id" class="form-control" placeholder="Enter Dwarf ID to search" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+<form action="/searchname" method="post">
+<div class="form-group">
+<label>Name: </label>
+<input type="text" name="name" class="form-control" placeholder="Enter Dwarf Name to search" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+
+<form action="/searchauthor" method="get">
+<div class="form-group">
+<label>Author Name: </label>
+<input type="text" name="author" class="form-control" placeholder="Enter Author to search" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+<form action="/searchnameauthor" method="get">
+<div class="form-group">
+
+<label>Dwarf Name: </label>
+<input type="text" name="name" class="form-control" placeholder="Enter Dwarf Name to search" style="width: 300px;"/> <br/>
+<label>Author Name: </label>
+<input type="text" name="author" class="form-control" placeholder="Enter Author to search" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
 	</div>
 	<script src="js/jquery.slim.min.js"></script>
 	<script src="js/popper.min.js"></script>

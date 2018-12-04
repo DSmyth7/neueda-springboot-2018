@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<title>Dwarf Home</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+<h1 class="display-4">Titanic Passengers</h1>
+
+			</div>
+		</div>
+<form action="/searchid" method="get">
+<div class="form-group">
+<label>ID: </label>
+<input type="text" name="id" class="form-control" placeholder="Enter Passenger ID to search" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+	</div>
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

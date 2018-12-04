@@ -38,5 +38,24 @@ public class PassengerController {
 		return "passengersPage.html";
 	
 	}
+	
+	@GetMapping("/searchname")
+	public String searchName(@RequestParam("name") String name, Model model) {
+		
+		model.addAttribute("pageTitle", "Titanic Passenger!");
+		model.addAttribute("passengers", this.passengerRepository.findByNameContaining(name));
+		return "passengersPage.html";
+	
+	}
+	
+	@GetMapping("/searchsexembarked")
+	public String searchSexEmbarked(@RequestParam("sex") String sex, @RequestParam("embarked") String embarked, Model model) {
+		model.addAttribute("pageTitle", "Titanic Passenger!");
+		model.addAttribute("dwarfs", this.passengerRepository.findBySexAndEmbarked(sex, embarked));
+		return "passengersPage.html";
+	
+	}
+	
+
 
 }

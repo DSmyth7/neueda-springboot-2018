@@ -2,28 +2,120 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <!-- Bootstrap core CSS -->
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-<title>Dwarf Home</title>
+<title>Titanic Home</title>
 </head>
 <body>
 	<div class="container">
+	
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+
+ <div class="carousel-item active">
+ <img class="d-block w-100" src=" images/titanicBelfast.jpg" style="border: none" alt="Second slide">
+ <div class="carousel-caption d-none d-md-block">
+ <h1 style="color: white; text-shadow: black 10px 10px 10px;">Titanic Passengers</h1>
+</div>
+  </div>
+
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+
 		<nav th:replace="layouts/nav :: navFragment"></nav>
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container text-center">
+		
+		<br/>
 
-<h1 class="display-4">Titanic Passengers</h1>
-
-			</div>
-		</div>
 <form action="/searchid" method="get">
 <div class="form-group">
 <label>ID: </label>
-<input type="text" name="id" class="form-control" placeholder="Enter Passenger ID to search" style="width: 300px;"/> <br/>
+<input type="text" name="id" class="form-control" placeholder="Enter Passenger ID" style="width: 300px;"/> <br/>
 <button type="submit" class="btn btn-primary">Search</button>
 </div>
 </form>
 <hr/>
+<form action="/searchname" method="get">
+<div class="form-group">
+<label>Passenger Name: </label>
+<input type="text" name="name" class="form-control" placeholder="Enter Passenger name" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+<form action="/searchsexembarked" method="get">
+<div class="form-group">
+<label>Sex: </label>
+<input type="text" name="sex" class="form-control" placeholder="Enter Passenger sex" style="width: 300px;"/> <br/>
+<label>Embarked: </label>
+<input type="text" name="embarked" class="form-control" placeholder="Enter where Passenger embarked" style="width: 300px;"/> <br/>
+<button type="submit" class="btn btn-primary">Search</button>
+</div>
+</form>
+<hr/>
+
+<footer class="section footer-classic context-dark bg-image" style="background: #204060;">
+        <div class="container">
+        <center>
+          <div class="row row-30">
+
+            <div class="col-md-4">
+			<br>
+              <h5>Plan Your Trip</h5>
+              <ul class="nav-list">
+			  	<li><a href="#">Areas</a></li>
+                <li><a href="#">Getting Around</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="#">Travel Tips</a></li>
+                
+              </ul>
+			  
+            </div>
+			<div class="col-md-4">
+			<br>
+              <h5>Stay</h5>
+              <ul class="nav-list">
+                <li><a href="#">Camping</a></li>
+				<li><a href="#">Guest Houses</a></li>
+                <li><a href="#">Hostels</a></li>
+                <li><a href="#">Hotels</a></li>
+              </ul>
+            </div>
+			<div class="col-md-4">
+			<br>
+              <h5>Contact Us</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Queens Road, Belfast,<br> BT1 1TD</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">ExploreBelfast.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>Phone:</dt>
+                <dd><a href="tel:#">(028) 90123456</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          </center>
+        </div>
+
+      </footer>
+
 
 	</div>
 	<script src="js/jquery.slim.min.js"></script>

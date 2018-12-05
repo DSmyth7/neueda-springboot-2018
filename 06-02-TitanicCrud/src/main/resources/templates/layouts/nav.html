@@ -10,12 +10,22 @@
 			<ul class="navbar-nav nav-fill w-100">
 
 				<li class="nav-item"><a class="nav-link" href="/"
-					style="color: white"><i class="fa fa-fw fa-home"></i>Home</a>
+					style="color: white"><i class="fa fa-fw fa-home"></i>Home</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="passenger"
+					style="color: white"><i class="fa fa-fw fa-envelope"></i>Passengers</a></li>
+
+
+				<li class="nav-item" style="border: none;">
+					<form action="/searchid" method="get">
+
+
+						<input type="text" name="id" class="form-control"
+							placeholder="Enter Passenger ID" style="width: 200px;" />
+						<button type="submit" class="btn btn-success">Search</button>
+					</form>
 				</li>
 
-				<li class="nav-item" style="border: none;"><a class="nav-link"
-					href="passenger" style="color: white"><i
-						class="fa fa-fw fa-envelope"></i>Passengers</a></li>
 
 			</ul>
 		</div>

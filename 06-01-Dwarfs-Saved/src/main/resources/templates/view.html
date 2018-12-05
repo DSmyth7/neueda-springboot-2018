@@ -2,8 +2,8 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
 <title th:text="${pageTitle}">Disney</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 
 				<h1 th:text="${headingOne} + ' ' + Dwarfs" class="display-4">Generic Title</h1>
 				<h3>
-					<a href="disney">Disney</a> <a>|</a> <a href="tolkien">Tolkien</a>
+					<a href="../disney">Disney</a> <a>|</a> <a href="../tolkien">Tolkien</a>
 				</h3>
 
 			</div>
@@ -24,25 +24,25 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
+						<th>DwarfId</th>
 						<th>Name</th>
 						<th>Author</th>
 						<th>Image</th>
-						<th></th>
+
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="dwarf: ${dwarfs}">
+					<tr>
+					<td th:text="${dwarf.dwarfId}"></td>
 						<td th:text="${dwarf.name}"></td>
 						<td th:text="${dwarf.author}"></td>
 						<td><img src="../static/images/Happy.png"
 							th:src="@{/images/}+${dwarf.image}"></img></td>
 							
-						<td><a href="#" th:href="@{/view/} + ${dwarf.dwarfId}">View</a>
-						
-						
-						<a href="">Edit</a>
-						<a href="">Delete</a></td>
 					</tr>
+							
+
+					
 				</tbody>
 			</table>
 		</div>

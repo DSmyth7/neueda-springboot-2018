@@ -22,6 +22,8 @@
 }
 
 
+
+
 .navbar a {
 	
 	display: inline-block;
@@ -37,6 +39,7 @@
 p{
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 20px;
+	font-color:black;
 }
 
 .navbar a:hover{
@@ -107,27 +110,19 @@ ul, ol {
     transition: .22s ease;
 }
 
-/* @media only screen and (max-width: 767px){ */
-/* 	.navbar{ */
-/* 	border-right: none; */
-/* 	} */
-/* } */
+@media screen and (max-width: 767px){
+	
+	.nav-item{
+	border-right:none;
+	
+	}
+	
+}
+	
+}
 
+}
 
-
-
-
-
-
-
-
-
-
-/* @media only screen and (max-width: 767px){ */
-/* 	.navbar{ */
-/* 	border-right: none; */
-/* 	} */
-/* } */
 
 
 

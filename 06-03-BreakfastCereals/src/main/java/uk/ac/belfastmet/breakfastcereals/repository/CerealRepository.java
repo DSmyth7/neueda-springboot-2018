@@ -9,4 +9,8 @@ public interface CerealRepository extends CrudRepository<Cereal,Integer>{
 	
 	Cereal findByCerealId(Integer cerealId);
 
+
+
+	Iterable<Cereal> findByCerealContaining(String cereal);
+
 }

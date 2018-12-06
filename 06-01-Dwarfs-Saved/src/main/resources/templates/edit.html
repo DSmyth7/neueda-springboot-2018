@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<title th:text="${pageTitle}">Disney</title>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="layouts/nav :: navFragment"></nav>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+
+				<h1 th:text="${headingOne} + ' ' + Dwarfs" class="display-4">Generic Title</h1>
+				<h3>
+					<a href="../disney">Disney</a> <a>|</a> <a href="../tolkien">Tolkien</a>
+				</h3>
+
+			</div>
+		</div>
+
+		<div class="container">
+		<form class="form-horizontal" th:action="@{/save}" method="post">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Column</th>
+						<th>Value</th>
+
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Dwarf ID:</td>
+					<td><input type="text" readonly="readonly" th:field="${dwarf.dwarfId}"></input></td>
+					</tr>
+						<tr>
+						<td>Name:</td>
+						<td> <input type="text" class="form-control" th:field="${dwarf.name}"></input>
+						<span th:if="${#fields.hasErrors('dwarf.name')}" th:errors="${dwarf.name}" th:class="help-block">Name cannot be empty</span>
+						</td>
+						</tr>
+						<tr>
+						<td>Author</td>
+						<td> <input type="text" class="form-control" th:field="${dwarf.author}"></td>
+						</tr>
+						<tr>
+						<td>Image</td>
+						<td> <input type="text" class="form-control" th:field="${dwarf.image}"></td></tr>		
+
+					
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-primary">Save</button>
+			</form>
+		</div>
+
+
+	</div>
+	<script src="/js/jquery.slim.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

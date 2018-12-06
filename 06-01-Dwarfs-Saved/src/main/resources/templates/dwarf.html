@@ -8,11 +8,12 @@
 </head>
 <body>
 	<div class="container">
+
+
+
 		<nav th:replace="layouts/nav :: navFragment"></nav>
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container text-center">
-
-
 
 				<h1 th:text="${headingOne} + ' ' + Dwarfs" class="display-4">Generic
 					Title</h1>
@@ -20,12 +21,18 @@
 					<a href="disney">Disney</a> <a>|</a> <a href="tolkien">Tolkien</a>
 				</h3>
 
+
 			</div>
 		</div>
 
 		<div class="alert alert-success" role="alert" th:if="${message}">
 			<p th:text="${message}"></p>
 		</div>
+		
+										<p>
+			<a href='#' th:href="@{/add/}">Add new Dwarf</a>
+		</p>
+
 
 		<div class="container">
 			<table class="table table-striped">
@@ -45,15 +52,13 @@
 							th:src="@{/images/}+${dwarf.image}"></img></td>
 
 						<td><a href="#" th:href="@{/view/} + ${dwarf.dwarfId}">View</a>
+							<a href="#" th:href="@{/edit/} + ${dwarf.dwarfId}">Edit</a> <a
+							href="#" th:href="@{/delete/} + ${dwarf.dwarfId}">Delete</a></td>
 
-
-							<a href="">Edit</a> <a href="#"
-							th:href="@{/delete/} + ${dwarf.dwarfId}">Delete</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-
 
 	</div>
 	<script src="js/jquery.slim.min.js"></script>

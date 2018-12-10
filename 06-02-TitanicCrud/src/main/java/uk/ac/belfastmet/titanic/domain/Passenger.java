@@ -2,6 +2,7 @@ package uk.ac.belfastmet.titanic.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -18,7 +19,7 @@ public class Passenger {
 	public Passenger() {
 		super();
 	}
-
+	//(strategy=GenerationType.IDENTITY)
 
 	public Passenger(Integer passengerId, Integer pClass, Integer age, Integer sibSp, Integer parch, Boolean survived,
 			String name, String sex, String ticket, String cabin, String embarked, Double fare) {

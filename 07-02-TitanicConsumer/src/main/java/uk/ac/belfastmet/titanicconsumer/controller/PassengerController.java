@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import uk.ac.belfastmet.titanicconsumer.domain.AllPassengers;
 import uk.ac.belfastmet.titanicconsumer.domain.Passenger;
 import uk.ac.belfastmet.titanicconsumer.service.PassengerService;
+import uk.ac.belfastmet.titanicconsumer.service.PassengerServiceImpl;
 
 
 @Controller
@@ -18,25 +19,51 @@ import uk.ac.belfastmet.titanicconsumer.service.PassengerService;
 public class PassengerController {
 	
 	@Autowired
-	PassengerService passengerService;
+	PassengerServiceImpl passengerService;
 	AllPassengers allPassengers;
 	
-	public PassengerController(PassengerService passengerService, AllPassengers allPassengers) {
+	
+	public PassengerController() {
+		super();
+	}
+
+	
+	public PassengerController(PassengerServiceImpl passengerService) {
+		super();
+		this.passengerService = passengerService;
+	}
+
+
+	public PassengerController(PassengerServiceImpl passengerService, AllPassengers allPassengers) {
 		super();
 		this.passengerService = passengerService;
 		this.allPassengers = allPassengers;
 	}
-	
+
+
+
 	@GetMapping("/{passengerId}")
 	public String viewPassenger(@PathVariable("passengerId") Integer passengerId, Model model) {
 		
 		model.addAttribute("pageTitle", "View Passenger");
 		
 		Passenger passenger = this.passengerService.get(passengerId);
-		model.addAttribute("passenger", passenger);
+		model.addAttribute("passengers", passenger);
 
 		
-		return "passengerPage.html";
+		return "passengersPage.html";
+	}
+	
+	@GetMapping("/passengers")
+	public String viewAllPassengers(@PathVariable("passengerId") Integer passengerId, Model model) {
+		
+		model.addAttribute("pageTitle", "View Passenger");
+		
+		Passenger passenger = this.passengerService.get(passengerId);
+		model.addAttribute("passengers", passenger);
+
+		
+		return "passengersPage.html";
 	}
 	
 }

@@ -14,10 +14,9 @@ public class Passenger {
 	}
 
 
-	public Passenger(Integer passengerId, Integer pClass, Integer age, Integer sibSp, Integer parch, Boolean survived,
+	public Passenger(Integer pClass, Integer age, Integer sibSp, Integer parch, Boolean survived,
 			String name, String sex, String ticket, String cabin, String embarked, Double fare) {
 		super();
-		this.passengerId = passengerId;
 		this.pClass = pClass;
 		this.age = age;
 		this.sibSp = sibSp;

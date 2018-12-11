@@ -44,7 +44,7 @@ public class PassengerServiceImpl implements PassengerService{
 	
 	public Passenger add(Passenger passenger) {
 		
-		String addPassengerUrl = this.apiUrl + "/passengers/" + passenger.getPassengerId();
+		String addPassengerUrl = this.apiUrl + "/passengers/";
 		
 		this.restTemplate.postForObject(addPassengerUrl, passenger, Passenger.class);
 		

@@ -32,7 +32,7 @@
 				</thead>
 				<tbody>
 					<tr>
-					<td>Dwarf ID:</td>
+					<td>Passenger ID:</td>
 					<td><input type="text" readonly="readonly" th:field="${passenger.passengerId}"></input></td>
 					</tr>
 						<tr>
@@ -76,6 +76,7 @@
 				
 				</tbody>
 			</table>
+			<input type="hidden" class="form-control" id="addUpdate" name="addUpdate" th:value="${pageTitle}" />
 				<button type="submit" class="btn btn-primary">Save</button>
 				<br/><br/>
 			</form>

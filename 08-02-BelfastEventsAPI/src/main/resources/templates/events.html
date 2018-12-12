@@ -25,18 +25,15 @@
 					<tr>
 
 						<th>Identifier</th>
-						<th>URL</th>
+
 						<th>Start Date</th>
-						<th>End Date</th>
-						<th>Time</th>
+
+
 						<th>Venue</th>
-						<th>Venue Url</th>	
-						<th>Audience</th>
-						<th>Theme</th>
-						<th>Cost</th>
-						<th></th>
 
 						<th></th>
+
+
 
 					</tr>
 				</thead>
@@ -44,18 +41,19 @@
 
 					<tr th:each="event: ${events}">
 						<td th:text="${event.identifier}"></td>
-						<td th:text="${event.url}"></td>
-						<td th:text="${event.startDate}"></td>
-						<td th:text="${event.endDate}"></td>
-						<td th:text="${event.time}"></td>
+						<td th:text="${#dates.format(event.startDate, 'dd/MM/yyyy')}">31/12/2017</td>
+
+
+
 						<td th:text="${event.venue}"></td>
-						<td th:text="${event.venueUrl}"></td>
-						<td th:text="${event.image}"></td>
-						<td th:text="${event.audience}"></td>
-						<td th:text="${event.theme}"></td>
-						<td th:text="${event.cost}"></td>
 
+						<td><a href="view.html">View</a></td>
 
+						<!-- 						<td th:switch="${event.venueUrl}"> -->
+						<!-- 						<p th:case="''" th:text="${event.venue}">Venue has no link</p> -->
+						<!-- 						<p th:case="*"> -->
+						<!-- 						<a href="" th:href="${event.venueUrl}" th:text="${event.name}"></a> -->
+						<!-- 						</td> -->
 
 					</tr>
 				</tbody>

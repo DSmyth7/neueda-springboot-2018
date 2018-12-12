@@ -9,7 +9,7 @@ public class Location {
 	private Float latitude, longitude;
 	
 	public String toString() {
-		String location = this.getName() + ", "
+		String location = "\n" + this.getName() + ", "
 				+ this.getLatitude() + ", "
 				+ this.getLongitude() + "\n";
 

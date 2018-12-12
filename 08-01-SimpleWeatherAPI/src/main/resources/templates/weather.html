@@ -12,7 +12,7 @@
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container text-center">
 
-				<h1 class="display-4">Weather</h1>
+				<h1 class="display-4" th:text="${todaysWeather.location.name}">Weather</h1>
 
 
 			</div>
@@ -22,39 +22,30 @@
 			<p th:text="${message}"></p>
 		</div>
 		
-<!-- 												<p> -->
-<!-- 			<a href='#' th:href="@{/add/}">Add new Passenger</a> -->
-<!-- 		</p> -->
 
 		<div class="container">
-			<input type="text" id="myInput" onkeyup="myFunction()"
-				placeholder="Search for names.." title="Type in a name"
-				class="form-control"><br />
+
 			<table class="table table-striped" id="myTable">
 				<thead>
 					<tr>
-						<th>City</th>
+
 						<th>Weather</th>
 						<th>Temperature</th>
-
-
+						<th>Wind Speed (mph)</th>
+						<th>Wind Direction</th>
 						<th></th>
 
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td th:text="${todaysWeather.location.name}"></td>
+
 						<td th:text="${todaysWeather.weather.description}"></td>
 						<td th:text="${todaysWeather.weather.temperature}"></td>
-
-
-<!-- 						<td><a class="btn btn-primary" href="#" -->
-<!-- 							th:href="@{/view/} + ${passenger.passengerId}">View</a><br /> -->
-<!-- 						<br /> <a class="btn btn-success" href="#" -->
-<!-- 							th:href="@{/edit/} + ${passenger.passengerId}">Edit</a><br /> -->
-<!-- 						<br /> <a class="btn btn-danger" href="#" -->
-<!-- 							th:href="@{/delete/} + ${passenger.passengerId}">Delete</a></td> -->
+						<td th:text="${todaysWeather.weather.wind.speed}"></td>
+						<td th:text="${todaysWeather.weather.wind.direction}"></td>
+						
+						<td><img src="" th:src="${todaysWeather.weather.image}"/></td>
 
 					</tr>
 				</tbody>

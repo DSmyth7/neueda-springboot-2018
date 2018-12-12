@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import uk.ac.belfastmet.weather.domain.TodaysWeather;
 
@@ -17,15 +16,16 @@ public class WeatherController {
 	
 	@GetMapping("")
 	public String home() {
+		
 		return "homePage.html";
 	}
 	
 	@GetMapping("/weather/{location}")
-	public String belfast(@PathVariable("location") String location, Model model) {
-		String belfastWeatherUrl = "http://codingfury.net/training/weathersample/weather.php?location=belfast";
+	public String displayLocation(@PathVariable("location") String location, Model model) {
+		String weatherUrl = "http://codingfury.net/training/weathersample/weather.php?location=" + location;
 		RestTemplate restTemplate = new RestTemplate();
 		//Belfast
-		TodaysWeather todaysWeather = restTemplate.getForObject(belfastWeatherUrl, TodaysWeather.class);
+		TodaysWeather todaysWeather = restTemplate.getForObject(weatherUrl, TodaysWeather.class);
 		
 		Logger logger = LoggerFactory.getLogger(TodaysWeather.class);
 		logger.info(todaysWeather.getLocation().toString());
@@ -33,6 +33,7 @@ public class WeatherController {
 		logger.info(todaysWeather.getWeather().getWind().toString());
 		
 		model.addAttribute("todaysWeather", todaysWeather);
+		
 		
 		return "weather.html";
 	}

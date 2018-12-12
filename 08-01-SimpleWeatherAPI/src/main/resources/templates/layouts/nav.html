@@ -11,24 +11,34 @@
 			<ul class="navbar-nav nav-fill w-100">
 
 				<li class="nav-item"><a class="nav-link" href="/"
-					style="color: white"><i class="fa fa-fw fa-home"></i>Home</a></li>
+					style="color: white">Home</a></li>
 
-				<li class="nav-item"><a class="nav-link" href="/passengers"
-					style="color: white"><i class="fa fa-fw fa-envelope"></i>Passengers</a></li>
+				<li class="nav-item"><a class="nav-link" href="/"
+					style="color: white">Weather</a>
+				</li>
+				<li class="nav-item dropdown" style="border-right:none"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="color: white"> Cities
+				</a>
 
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown ">
 
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/weather/Belfast}">Belfast</a>
 
-				<form action="/searchid" method="get"
-					class="form-inline my-2 my-lg-0">
+						<div class="dropdown-divider"></div>
 
-					<center>
-					<li class="nav-item" style="border-right:none;"> 
-						<input type="text" name="id" class="form-control"
-							placeholder="Enter Passenger ID" style="width: 60%;" />
-						<button type="submit" class="btn btn-success">Search</button>
-						</li>
-					</center>
-				</form>
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/weather/London}">London</a>
+
+						<div class="dropdown-divider"></div>
+
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/weather/Dublin}">Dublin</a>
+
+					</div></li>
+
 
 
 

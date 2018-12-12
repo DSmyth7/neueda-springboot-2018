@@ -5,80 +5,28 @@
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-<title>Titanic Home</title>
+<title>Weather</title>
 </head>
 <body>
 	<div class="container">
 	
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-<ol class="carousel-indicators">
-<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-</ol>
-<div class="carousel-inner">
-
- <div class="carousel-item active">
- <img class="d-block w-100" src=" images/titanicBelfast.jpg" style="border: none" alt="Second slide">
- <div class="carousel-caption d-none d-md-block">
- <h1 style="color: white; text-shadow: black 10px 10px 10px;">Titanic Passengers</h1>
-</div>
-  </div>
-
-</div>
-<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>
-</div>
 
 		<nav th:replace="layouts/nav :: navFragment"></nav>
 		
-		<br/>
+		<div class="container">
 		
-<!-- 		<div class="row"> -->
-						
-<!-- 				<div class="col-lg-4">  -->
-<!-- 					<img src="images/titanicBelfast2.png"> -->
-<!-- 					<h3>A historic location</h3> -->
-<!-- 					<p>Titanic Belfast is built on the actual spot where the ship was built. Visit the museum to learn about the story of the ship's development and creation.</p> -->
-<!-- 				</div> -->
-					
-<!-- 					<div class="col-lg-4">  -->
-<!-- 						<img src="images/stairway.png"> -->
-<!-- 						<h3>A beautiful interior</h3> -->
-<!-- 						<p>At Titanic Belfast we have faithfully created an exact replica of the stairway leading down to the fist class dining area.</p> -->
-<!-- 					</div> -->
-					
-<!-- 					<div class="col-lg-4">  -->
-<!-- 						<img src="images/interactivity.png"> -->
-<!-- 						<h3>An interactive experience</h3> -->
-<!-- 						<p>Titanic Belfast allows you to experience life on board the ship by using interactive technology. Have your photograph taken and choose your background as if you were actually there.</p> -->
-<!-- 					</div>  -->
-				
-<!-- 		</div> -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-<form action="/searchname" method="get">
-<div class="form-group">
-<label>Passenger Name: </label>
-<input type="text" name="name" class="form-control" placeholder="Enter Passenger name" style="width: 300px;"/> <br/>
-<button type="submit" class="btn btn-primary">Search</button>
-</div>
-</form>
-<hr/>
+		</div>
+		
 
-<form action="/searchsexembarked" method="get">
-<div class="form-group">
-<label>Sex: </label>
-<input type="text" name="sex" class="form-control" placeholder="Enter Passenger sex" style="width: 300px;"/> <br/>
-<label>Embarked: </label>
-<input type="text" name="embarked" class="form-control" placeholder="Enter where Passenger embarked" style="width: 300px;"/> <br/>
-<button type="submit" class="btn btn-primary">Search</button>
-</div>
-</form>
-<hr/>
 
 <footer class="section footer-classic context-dark bg-image" style="background: #204060;">
         <div class="container">

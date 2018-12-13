@@ -1,0 +1,53 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary"
+		th:fragment="navFragment">
+		<button class="navbar-toggler" data-toggle="collapse"
+			data-target="#collapse_target">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapse_target">
+
+			<ul class="navbar-nav nav-fill w-100">
+
+				<li class="nav-item"><a class="nav-link" href="/"
+					style="color: white">Home</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="/"
+					style="color: white">All MLA's</a></li>
+				<li class="nav-item dropdown" style="border-right: none"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="color: white">Constituency</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown ">
+
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/mlas/10}">North Belfast</a>
+
+						<div class="dropdown-divider"></div>
+
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/mlas/2}">East Belfast</a>
+
+						<div class="dropdown-divider"></div>
+
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/mlas/13}">South Belfast</a>
+
+						<div class="dropdown-divider"></div>
+
+						<a class="dropdown-item" style="color: white" href="#"
+							th:href="@{/mlas/17}">West Belfast</a>
+
+					</div></li>
+
+
+
+
+			</ul>
+
+		</div>
+	</nav>
+</body>
+</html>
